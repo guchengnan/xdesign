@@ -1,0 +1,8 @@
+@font-face {
+  font-family: 'HarmonyOS';
+  src: url('../fonts/HarmonyOS_Sans/HarmonyOS_Sans/HarmonyOS_Sans_Medium.ttf');
+}
+html,
+body {
+  font-family: 'HarmonyOS', Arial, Helvetica, sans-serif;
+}

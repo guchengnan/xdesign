@@ -1,0 +1,54 @@
+/* 状态标签 */
+.status,
+.level {
+  color: #fff;
+  height: 24px;
+  line-height: 24px;
+  border-radius: 2px;
+  padding: 0 8px;
+  font-size: 12px;
+  user-select: none;
+  display: inline-block;
+  vertical-align: top;
+  letter-spacing: 0;
+  & + span {
+    margin-left: 8px;
+  }
+  /* 待受理 */
+  &.status-error {
+    color: #bc3232;
+    background-color: #faefef;
+  }
+  /* 已受理 */
+  &.status-warn {
+    color: #ff9f00;
+    background-color: #fef7ec;
+  }
+  /* 处置中 */
+  &.status-info {
+    color: #0288d1;
+    background-color: #ebf6fc;
+  }
+  /* 已结束 */
+  &.status-success {
+    color: #45ad49;
+    background-color: #f1f9f1;
+  }
+  /* 等级标签 */
+  /* 特别重大 */
+  &.level-error {
+    background-color: #f03644;
+  }
+  /* 重大 */
+  &.level-warn {
+    background-color: #f68e30;
+  }
+  /* 较大 */
+  &.level-alarm {
+    background-color: #edbb3a;
+  }
+  /* 一般 */
+  &.level-info {
+    background-color: #3665f0;
+  }
+}
