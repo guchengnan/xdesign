@@ -44,7 +44,7 @@ main {
     ul {
       display: flex;
       flex-wrap: wrap;
-      li {
+      a {
         font-size: 14px;
         color: #253554;
         height: 40px;
@@ -62,7 +62,7 @@ main {
           color: #0052d9;
           background-color: #f3f5f8;
           box-shadow: inset 8px 8px 20px 0 rgba(55, 99, 170, 0.11),
-            inset -8px -8px 20px 0 #fff;
+              inset -8px -8px 20px 0 #fff;
         }
       }
     }
