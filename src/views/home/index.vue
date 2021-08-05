@@ -4,6 +4,11 @@
       <h1>XDesign组件库</h1>
       <p>XDesign希望该组件库可以成为你开发中的X因素，进而提高你的效率。</p>
       <ul>
+        <li>
+          <a href="https://github.com/guchengnan/xdesign" target="_blank"
+            >GitHub ★</a
+          >
+        </li>
         <li><router-link to="/tag">Tag标签</router-link></li>
         <li><router-link to="/pageheader">PageHeader页头</router-link></li>
       </ul>
@@ -62,10 +67,16 @@ main {
           color: #0052d9;
           background-color: #f3f5f8;
           box-shadow: inset 8px 8px 20px 0 rgba(55, 99, 170, 0.11),
-              inset -8px -8px 20px 0 #fff;
+            inset -8px -8px 20px 0 #fff;
         }
       }
     }
+  }
+  footer {
+    font-size: 14px;
+    text-align: center;
+    color: #98a3b7;
+    line-height: 20px;
   }
 }
 </style>
