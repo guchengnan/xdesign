@@ -2,8 +2,10 @@ import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
 import store from "./store";
-// 全局样式
-import "../src/assets/styles/global.scss"
+
+// XDesign组件引用
+import XDesign from '../packages/index'
+Vue.use(XDesign)
 
 Vue.config.productionTip = false;
 

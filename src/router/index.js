@@ -27,6 +27,15 @@ const routes = [
         /* webpackChunkName: "pageheader" */ "../views/page-header/index.vue"
       ),
   },
+  // 致谢
+  {
+    path: "/thanks",
+    name: "Thanks",
+    component: () =>
+      import(
+        /* webpackChunkName: "thanks" */ "../views/thanks/index.vue"
+      ),
+  },
 ];
 
 const router = new VueRouter({

@@ -1,6 +1,29 @@
+<template>
+  <span class="x-tag" :class="activeClass">
+    <slot>标签</slot>
+  </span>
+</template>
+
+<script>
+export default {
+  name: "XTag",
+  props: {
+    color: {
+      type: String,
+      default: "status-error",
+    },
+  },
+  computed: {
+    activeClass() {
+      return `x-tag-${this.color}`;
+    },
+  },
+};
+</script>
+
+<style lang="scss" scoped>
 /* 状态标签 */
-.status,
-.level {
+.x-tag {
   color: #fff;
   height: 24px;
   line-height: 24px;
@@ -15,40 +38,41 @@
     margin-left: 8px;
   }
   /* 待受理 */
-  &.status-error {
+  &.x-tag-status-error {
     color: #bc3232;
     background-color: #faefef;
   }
   /* 已受理 */
-  &.status-warn {
+  &.x-tag-status-warn {
     color: #ff9f00;
     background-color: #fef7ec;
   }
   /* 处置中 */
-  &.status-info {
+  &.x-tag-status-info {
     color: #0288d1;
     background-color: #ebf6fc;
   }
   /* 已结束 */
-  &.status-success {
+  &.x-tag-status-success {
     color: #45ad49;
     background-color: #f1f9f1;
   }
   /* 等级标签 */
   /* 特别重大 */
-  &.level-error {
+  &.x-tag-level-error {
     background-color: #f03644;
   }
   /* 重大 */
-  &.level-warn {
+  &.x-tag-level-warn {
     background-color: #f68e30;
   }
   /* 较大 */
-  &.level-alarm {
+  &.x-tag-level-alarm {
     background-color: #edbb3a;
   }
   /* 一般 */
-  &.level-info {
+  &.x-tag-level-info {
     background-color: #3665f0;
   }
 }
+</style>

@@ -12,8 +12,8 @@
       <h3>副标题或tag列表</h3>
       <x-page-header title="标题文字" :back="true" subTitle="副标题">
         <template slot="tags">
-          <span class="status status-info">处置中</span>
-          <span class="level level-error">特别重大</span>
+          <x-tag color="status-info">处置中</x-tag>
+          <x-tag color="level-error">特别重大</x-tag>
         </template>
       </x-page-header>
     </section>
@@ -21,8 +21,8 @@
       <h3>带有操作区</h3>
       <x-page-header title="标题文字" :back="true" subTitle="副标题">
         <template slot="tags">
-          <span class="status status-info">处置中</span>
-          <span class="level level-error">特别重大</span>
+          <x-tag color="status-info">处置中</x-tag>
+          <x-tag color="level-error">特别重大</x-tag>
         </template>
         <template slot="extra">操作区</template>
       </x-page-header>
@@ -31,8 +31,8 @@
       <h3>带有标签页</h3>
       <x-page-header title="标题文字" :back="true" subTitle="副标题" :tabs="tabs">
         <template slot="tags">
-          <span class="status status-info">处置中</span>
-          <span class="level level-error">特别重大</span>
+          <x-tag color="status-info">处置中</x-tag>
+          <x-tag color="level-error">特别重大</x-tag>
         </template>
         <template slot="extra">操作区</template>
       </x-page-header>
@@ -116,12 +116,7 @@
 </template>
 
 <script>
-// 引入x-pageHeader组件
-import XPageHeader from '@/components/x-page-header'
 export default {
-  components: {
-    XPageHeader,
-  },
   data() {
     return {
       tabs: [

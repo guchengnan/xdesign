@@ -136,11 +136,11 @@ export default {
         font-size: 14px;
         color: #4b5d6c;
         &:hover {
-          color: var(--mainColor);
+          color: #4a62e7;
         }
         &.active {
-          color: var(--mainColor);
-          border-bottom-color: var(--mainColor);
+          color: #4a62e7;
+          border-bottom-color: #4a62e7;
         }
         &:last-child {
           margin-right: 0;

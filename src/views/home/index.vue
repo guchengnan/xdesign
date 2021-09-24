@@ -2,7 +2,7 @@
   <main>
     <article>
       <h1>XDesign组件库</h1>
-      <p>XDesign希望该组件库可以成为你开发中的X因素，进而提高你的效率。</p>
+      <p>我们希望XDesign组件库可以成为你开发中的x因素，进而提高你的效率。</p>
       <ul>
         <li>
           <a href="https://github.com/guchengnan/xdesign" target="_blank"
@@ -11,6 +11,7 @@
         </li>
         <li><router-link to="/tag">Tag标签</router-link></li>
         <li><router-link to="/pageheader">PageHeader页头</router-link></li>
+        <li><router-link to="/thanks">特别鸣谢</router-link></li>
       </ul>
     </article>
   </main>
@@ -22,7 +23,7 @@ export default {};
 
 <style lang="scss" scoped>
 main {
-  background-color: #f5f7fa;
+  background-color: transparent!important;
   position: absolute;
   left: 0;
   top: 0;
@@ -40,6 +41,16 @@ main {
     box-shadow: 8px 8px 20px 0 rgba(55, 99, 170, 0.1), -8px -8px 20px 0 #fff;
     transition: all 0.3s ease-in-out;
     border-radius: 4px;
+    h1 {
+      display: flex;
+      width: 200px;
+      height: 56px;
+      text-indent: -100em;
+      justify-content: flex-start;
+      align-content: center;
+      background: transparent url('~@/assets/images/logo.svg') center center;
+      background-size: cover;
+    }
     p {
       font-size: 14px;
       color: #98a3b7;

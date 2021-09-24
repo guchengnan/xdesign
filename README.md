@@ -4,7 +4,7 @@
 
 ## Start
 
-当前组件处于建设阶段，并未发布npm仓库，欢迎各位积极提issues和pr，如需使用直接引入`src/components`即可。
+当前组件处于建设阶段，并未发布npm仓库，欢迎各位积极提issues和pr，如需使用直接引入`packages`即可。
 
 ## Project setup
 ```bash
