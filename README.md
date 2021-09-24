@@ -1,6 +1,6 @@
 # xdesign
 
-:rainbow:[demo](http://xdesign.panzheng.xyz/)
+:rainbow:[演示地址](http://xdesign.panzheng.xyz/)
 
 ## Start
 
