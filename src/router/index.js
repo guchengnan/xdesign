@@ -4,9 +4,8 @@ import VueRouter from "vue-router";
 Vue.use(VueRouter);
 
 const routes = [
-  { path: "/", redirect: "/home" },
   {
-    path: "/home",
+    path: "/",
     name: "Home",
     component: () =>
       import(/* webpackChunkName: "home" */ "../views/home/index.vue"),
@@ -36,6 +35,15 @@ const routes = [
         /* webpackChunkName: "thanks" */ "../views/thanks/index.vue"
       ),
   },
+  // 404
+  {
+    path: "*",
+    name: "NotFound",
+    component: () =>
+      import(
+        /* webpackChunkName: "thanks" */ "../views/not-found/index.vue"
+      ),
+  }
 ];
 
 const router = new VueRouter({
