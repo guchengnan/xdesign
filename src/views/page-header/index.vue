@@ -29,7 +29,12 @@
     </section>
     <section>
       <h3>带有标签页</h3>
-      <x-page-header title="标题文字" :back="true" subTitle="副标题" :tabs="tabs">
+      <x-page-header
+        title="标题文字"
+        :back="true"
+        subTitle="副标题"
+        :tabs="tabs"
+      >
         <template slot="tags">
           <x-tag color="status-info">处置中</x-tag>
           <x-tag color="level-error">特别重大</x-tag>

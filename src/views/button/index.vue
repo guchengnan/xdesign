@@ -64,7 +64,7 @@
           <tr>
             <td>@click</td>
             <td>点击按钮时的回调</td>
-            <td>Function(event) => void</td>
+            <td>Function(event) {}</td>
           </tr>
         </tbody>
       </table>

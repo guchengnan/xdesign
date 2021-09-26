@@ -23,16 +23,20 @@
       <figure>
         <img src="~@/assets/images/thanks/100font.jpg" />
         <figcaption>
-            <h5>100font.com</h5>
-            <p>一个专门收集整理“免费商用字体、免版权字体、没有版权的字体、无版权的字体”的字体下载网站，免费下载、免费商用！</p>
+          <h5>100font.com</h5>
+          <p>
+            一个专门收集整理“免费商用字体、免版权字体、没有版权的字体、无版权的字体”的字体下载网站，免费下载、免费商用！
+          </p>
         </figcaption>
       </figure>
       <figure>
-          <img src="~@/assets/images/thanks/harmony.svg" />
-          <figcaption>
-              <h5>Harmonyos</h5>
-              <p>华为HUAWEI鸿蒙OS是新一代的智能终端操作系统；鸿蒙HarmonyOS开发者、应用开发、设备开发、鸿蒙生态、分布式系统为不同设备的智能化、互联与协同提供了统一的语言。华为鸿蒙智能手机操作系统带来简洁，流畅，连续，安全可靠的全场景交互体验。</p>
-          </figcaption>
+        <img src="~@/assets/images/thanks/harmony.svg" />
+        <figcaption>
+          <h5>Harmonyos</h5>
+          <p>
+            华为HUAWEI鸿蒙OS是新一代的智能终端操作系统；鸿蒙HarmonyOS开发者、应用开发、设备开发、鸿蒙生态、分布式系统为不同设备的智能化、互联与协同提供了统一的语言。华为鸿蒙智能手机操作系统带来简洁，流畅，连续，安全可靠的全场景交互体验。
+          </p>
+        </figcaption>
       </figure>
     </section>
   </main>
@@ -61,7 +65,7 @@ figure {
       color: rgba(0, 0, 0, 0.45);
     }
     p {
-        font-size: 14px;
+      font-size: 14px;
       color: rgba(0, 0, 0, 0.65);
     }
   }

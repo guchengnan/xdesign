@@ -9,10 +9,13 @@
             >GitHub ★</a
           >
         </li>
-        <li><router-link to="/button">Button标签</router-link></li>
+        <li><router-link to="/button">Button按钮</router-link></li>
         <li><router-link to="/tag">Tag标签</router-link></li>
-        <li><router-link to="/pageheader">PageHeader页头</router-link></li>
+        <li><router-link to="/page-header">PageHeader页头</router-link></li>
+        <li><router-link to="/tree-modal">TreeModal中枢</router-link></li>
+        <!-- <li><router-link to="/tree-select">TreeSelect中枢</router-link></li> -->
         <li><router-link to="/thanks">特别鸣谢</router-link></li>
+        <li><router-link to="/about">关于作者</router-link></li>
       </ul>
     </article>
   </main>
@@ -24,7 +27,7 @@ export default {};
 
 <style lang="scss" scoped>
 main {
-  background-color: transparent!important;
+  background-color: transparent !important;
   position: absolute;
   left: 0;
   top: 0;
@@ -36,7 +39,6 @@ main {
     width: 100%;
     height: 100%;
     padding: 24px;
-    cursor: pointer;
     background-image: linear-gradient(0deg, #fff, #f3f5f8);
     border: 2px solid #fff;
     box-shadow: 8px 8px 20px 0 rgba(55, 99, 170, 0.1), -8px -8px 20px 0 #fff;
@@ -49,7 +51,7 @@ main {
       text-indent: -100em;
       justify-content: flex-start;
       align-content: center;
-      background: transparent url('~@/assets/images/logo.svg') center center;
+      background: transparent url("~@/assets/images/logo.svg") center center;
       background-size: cover;
     }
     p {
