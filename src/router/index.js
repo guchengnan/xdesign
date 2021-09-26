@@ -26,11 +26,20 @@ const routes = [
   },
   // PageHeader页头
   {
-    path: "/pageheader",
+    path: "/page-header",
     name: "TitleBar",
     component: () =>
       import(
         /* webpackChunkName: "pageheader" */ "../views/page-header/index.vue"
+      ),
+  },
+  // TreeModal页头
+  {
+    path: "/tree-modal",
+    name: "TreeModal",
+    component: () =>
+      import(
+        /* webpackChunkName: "pageheader" */ "../views/tree-modal/index.vue"
       ),
   },
   // 致谢
@@ -38,19 +47,22 @@ const routes = [
     path: "/thanks",
     name: "Thanks",
     component: () =>
-      import(
-        /* webpackChunkName: "thanks" */ "../views/thanks/index.vue"
-      ),
+      import(/* webpackChunkName: "thanks" */ "../views/thanks/index.vue"),
+  },
+  // 关于
+  {
+    path: "/about",
+    name: "About",
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/about/index.vue"),
   },
   // 404
   {
     path: "*",
     name: "NotFound",
     component: () =>
-      import(
-        /* webpackChunkName: "thanks" */ "../views/not-found/index.vue"
-      ),
-  }
+      import(/* webpackChunkName: "thanks" */ "../views/not-found/index.vue"),
+  },
 ];
 
 const router = new VueRouter({
