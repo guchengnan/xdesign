@@ -2,7 +2,7 @@
   <div class="x-page-header" :type="type">
     <div class="x-page-header-left">
       <header>
-        <a v-if="back" href="javascript:;" @click.stop="backClick">返回</a>
+        <a v-if="back" href="javascript:;" @click.stop="handleBack">返回</a>
         <h2>{{ title }}</h2>
         <slot v-if="$slots.subTitle" name="subTitle"></slot>
         <p v-else>{{ subTitle }}</p>
@@ -13,7 +13,7 @@
           v-for="(item, index) in tabs"
           :key="index"
           :class="{ active: index === activeIndex }"
-          @click="tabClick(item, index)"
+          @click="handleTab(item, index)"
         >
           {{ item.title }}
         </li>
@@ -59,12 +59,12 @@ export default {
   },
   methods: {
     // tab 被点击的回调
-    tabClick(action, index) {
+    handleTab(action, index) {
       this.activeIndex = index;
       this.$emit("change", action);
     },
     // 返回按钮的点击事件
-    backClick() {
+    handleBack() {
       this.$emit("back");
     },
   },

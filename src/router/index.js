@@ -10,6 +10,13 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "home" */ "../views/home/index.vue"),
   },
+  // Button标签
+  {
+    path: "/button",
+    name: "Button",
+    component: () =>
+      import(/* webpackChunkName: "button" */ "../views/button/index.vue"),
+  },
   // Tag标签
   {
     path: "/tag",

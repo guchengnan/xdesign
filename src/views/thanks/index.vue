@@ -2,7 +2,7 @@
   <main>
     <section>
       <h3>致谢</h3>
-      <figure>
+      <figure v-if="false">
         <img src="~@/assets/images/thanks/wtdwu.jpg" />
         <figcaption>
           <h5>wtdwu</h5>

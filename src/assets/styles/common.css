@@ -32,9 +32,15 @@ img {
   padding: 8px;
   margin-bottom: 24px;
 }
+/* 
+ * 1号色(标题正文)：#1d1f24
+ * 2号色(说明文字)：#4b5d6c
+ * 3号色(提示文字)：#919eab
+ * 4号色(弱提示文字)：#c0c5ca
+ */
 #app > main > section > h3 {
   font-size: 16px;
-  color: #1d1f25;
+  color: #1d1f24;
   line-height: 36px;
   position: relative;
   padding-left: 12px;

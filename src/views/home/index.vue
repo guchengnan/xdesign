@@ -9,6 +9,7 @@
             >GitHub ★</a
           >
         </li>
+        <li><router-link to="/button">Button标签</router-link></li>
         <li><router-link to="/tag">Tag标签</router-link></li>
         <li><router-link to="/pageheader">PageHeader页头</router-link></li>
         <li><router-link to="/thanks">特别鸣谢</router-link></li>

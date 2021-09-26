@@ -1,9 +1,11 @@
-import PageHeader from './page-header'
+import Button from './button'
 import Tag from './tag'
+import PageHeader from './page-header'
 
 const components = {
-  PageHeader,
-  Tag
+  Button,
+  Tag,
+  PageHeader
 }
 
 const install = function (Vue) {
@@ -18,6 +20,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 
 export default {
   install,
-  PageHeader,
-  Tag
+  Button,
+  Tag,
+  PageHeader
 }
