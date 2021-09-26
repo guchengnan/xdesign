@@ -9,9 +9,6 @@
             <td>潘正</td>
             <td>性别</td>
             <td>男</td>
-            <td rowspan="5" style="width: 120px; padding: 8px">
-              <img src="../../assets/images/about/pz.jpg" />
-            </td>
           </tr>
           <tr>
             <td>年龄</td>
@@ -55,9 +52,6 @@ table {
   td:nth-child(3) {
     max-width: 50px;
     background-color: #f9f9f9;
-  }
-  img {
-    width: 100%;
   }
 }
 </style>

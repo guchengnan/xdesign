@@ -69,6 +69,7 @@ img {
 }
 #app > main > section > table {
   width: 100%;
+  word-break: break-word;
   border-collapse: collapse;
   background-color: #fff;
   border: 1px solid #e8e8e8;
