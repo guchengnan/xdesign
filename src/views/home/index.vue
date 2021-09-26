@@ -18,11 +18,39 @@
         <li><router-link to="/about">关于作者</router-link></li>
       </ul>
     </article>
+    <!-- 遮罩层 -->
+    <div v-if="isMobile" class="mask">横屏效果更佳</div>
   </main>
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      isMobile: false,
+    };
+  },
+  beforeRouteEnter(to, from, next) {
+    next((vm) => {
+      if (!from.name) {
+        vm.getMediaType();
+      }
+    });
+  },
+  methods: {
+    getMediaType() {
+      const userAgentInfo = navigator.userAgent;
+      const isMobile = userAgentInfo.match(
+        /(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i
+      );
+      const isVertical = window.orientation === 180 || window.orientation === 0;
+      this.isMobile = isMobile && isVertical;
+      setTimeout(() => {
+        this.isMobile = false;
+      }, 5000);
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -91,6 +119,20 @@ main {
     text-align: center;
     color: #98a3b7;
     line-height: 20px;
+  }
+  .mask {
+    width: 100vw;
+    height: 100vh;
+    font-size: 10vw;
+    color: #f1f1f1;
+    text-align: center;
+    line-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
   }
 }
 </style>
