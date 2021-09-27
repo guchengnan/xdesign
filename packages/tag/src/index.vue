@@ -1,21 +1,52 @@
 <template>
-  <span class="x-tag" :class="activeClass">
-    <slot>标签</slot>
-  </span>
+  <div
+    v-if="visible"
+    class="x-tag"
+    :theme="theme"
+    :type="type"
+    :closable="closable"
+  >
+    <span><slot>标签</slot></span>
+    <a
+      v-if="closable"
+      href="javascript:;"
+      class="x-tag-close"
+      @click.stop="handleClose(data)"
+      >×</a
+    >
+  </div>
 </template>
 
 <script>
 export default {
   name: "XTag",
   props: {
-    color: {
+    theme: {
       type: String,
-      default: "status-error",
+      default: "light",
+    },
+    type: {
+      type: String,
+      default: "default",
+    },
+    closable: {
+      type: Boolean,
+      default: false,
+    },
+    data: {
+      type: Object,
+      default: () => {},
     },
   },
-  computed: {
-    activeClass() {
-      return `x-tag-${this.color}`;
+  data() {
+    return {
+      visible: true,
+    };
+  },
+  methods: {
+    handleClose(action) {
+      this.visible = false;
+      this.$emit("close", action);
     },
   },
 };
@@ -24,55 +55,96 @@ export default {
 <style lang="scss" scoped>
 /* 状态标签 */
 .x-tag {
-  color: #fff;
   height: 24px;
   line-height: 24px;
   border-radius: 2px;
   padding: 0 8px;
   font-size: 12px;
   user-select: none;
-  display: inline-block;
+  display: inline-flex;
   vertical-align: top;
   letter-spacing: 0;
-  & + span {
+  align-items: center;
+  justify-content: center;
+  & + & {
     margin-left: 8px;
   }
-  /* 待受理 */
-  &.x-tag-status-error {
-    color: #bc3232;
-    background-color: #faefef;
+  // 浅色主题
+  &[theme="light"] {
+    &[type="default"] {
+      color: #4b5d6c;
+      background-color: #f1f2f4;
+    }
+    &[type="info"] {
+      color: #0288d1;
+      background-color: #ebf6fc;
+    }
+    &[type="success"] {
+      color: #45ad49;
+      background-color: #f1f9f1;
+    }
+    &[type="warn"] {
+      color: #ff9f00;
+      background-color: #fef7ec;
+    }
+    &[type="error"] {
+      color: #bc3232;
+      background-color: #faefef;
+    }
   }
-  /* 已受理 */
-  &.x-tag-status-warn {
-    color: #ff9f00;
-    background-color: #fef7ec;
+  // 深色主题
+  &[theme="dark"] {
+    color: #fff;
+    &[type="error"] {
+      background-color: #f03644;
+    }
+    &[type="warn"] {
+      background-color: #f68e30;
+    }
+    &[type="alarm"] {
+      background-color: #edbb3a;
+    }
+    &[type="info"] {
+      background-color: #3665f0;
+    }
   }
-  /* 处置中 */
-  &.x-tag-status-info {
-    color: #0288d1;
-    background-color: #ebf6fc;
+  // 暗黑主题（后期迭代）
+  // &[theme="dark"] {
+  //   &[type="error"] {
+  //     color: #ff8d8d;
+  //     background-color: rgba(241, 54, 54, 0.25);
+  //   }
+  //   &[type="warn"] {
+  //     color: #ff913f;
+  //     background-color: rgba(255, 145, 63, 0.25);
+  //   }
+  //   &[type="success"] {
+  //     color: #00ea9c;
+  //     background-color: rgba(0, 234, 156, 0.25);
+  //   }
+  //   &[type="info"] {
+  //     color: #91cdff;
+  //     background-color: rgba(100, 179, 245, 0.3);
+  //   }
+  // }
+  > span {
+    color: inherit;
+    font-size: inherit;
   }
-  /* 已结束 */
-  &.x-tag-status-success {
-    color: #45ad49;
-    background-color: #f1f9f1;
+  &[closable] > span {
+    display: inline-block;
+    max-width: 64px;
+    word-break: keep-all;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
-  /* 等级标签 */
-  /* 特别重大 */
-  &.x-tag-level-error {
-    background-color: #f03644;
-  }
-  /* 重大 */
-  &.x-tag-level-warn {
-    background-color: #f68e30;
-  }
-  /* 较大 */
-  &.x-tag-level-alarm {
-    background-color: #edbb3a;
-  }
-  /* 一般 */
-  &.x-tag-level-info {
-    background-color: #3665f0;
+  .x-tag-close {
+    color: #4b5d6c;
+    font-size: 14px;
+    &:hover {
+      color: #1d1f25;
+    }
   }
 }
 </style>
