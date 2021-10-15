@@ -1,4 +1,13 @@
-@import url("./fonts.css");
+@import url('./iconfont.css');
+@font-face {
+  font-family: 'HarmonyOS';
+  src: url('../fonts/HarmonyOS_Sans/HarmonyOS_Sans/HarmonyOS_Sans_Medium.ttf');
+}
+html,
+body {
+  font-family: 'HarmonyOS', Arial, Helvetica, sans-serif;
+}
+
 html,
 body {
   background-color: #f1f1f1;
@@ -10,7 +19,7 @@ body {
   font-size: 14px;
   list-style-type: none;
   box-sizing: border-box;
-  font-family: "HarmonyOS", Impact, Haettenschweiler, "Arial Narrow Bold",
+  font-family: "HarmonyOS", "Segoe UI Symbol", "Arial Narrow Bold",
     sans-serif;
 }
 

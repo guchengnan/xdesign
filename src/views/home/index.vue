@@ -10,10 +10,12 @@
           >
         </li>
         <li><router-link to="/button">Button按钮</router-link></li>
+        <li><router-link to="/icon">Icon图标</router-link></li>
+        <li><router-link to="/input">Input输入框</router-link></li>
         <li><router-link to="/tag">Tag标签</router-link></li>
         <li><router-link to="/page-header">PageHeader页头</router-link></li>
-        <li><router-link to="/tree-modal">TreeModal中枢</router-link></li>
-        <!-- <li><router-link to="/tree-select">TreeSelect中枢</router-link></li> -->
+        <li><router-link to="/tree-modal">TreeModal树形控件</router-link></li>
+        <li><router-link to="/tree-select">TreeSelect中枢</router-link></li>
         <li><router-link to="/thanks">特别鸣谢</router-link></li>
         <li><router-link to="/about">关于作者</router-link></li>
       </ul>

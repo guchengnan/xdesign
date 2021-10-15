@@ -17,12 +17,26 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "button" */ "../views/button/index.vue"),
   },
+  // Icon标签
+  {
+    path: "/icon",
+    name: "Icon",
+    component: () =>
+      import(/* webpackChunkName: "icon" */ "../views/icon/index.vue"),
+  },
   // Tag标签
   {
     path: "/tag",
     name: "Tag",
     component: () =>
       import(/* webpackChunkName: "tag" */ "../views/tag/index.vue"),
+  },
+  // Input输入框
+  {
+    path: "/input",
+    name: "Input",
+    component: () =>
+      import(/* webpackChunkName: "input" */ "../views/input/index.vue"),
   },
   // PageHeader页头
   {
