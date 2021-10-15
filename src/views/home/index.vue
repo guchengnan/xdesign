@@ -9,6 +9,8 @@
             >GitHub ★</a
           >
         </li>
+        <li><router-link to="/font">Font字体</router-link></li>
+        <li><router-link to="/color">Color颜色</router-link></li>
         <li><router-link to="/button">Button按钮</router-link></li>
         <li><router-link to="/icon">Icon图标</router-link></li>
         <li><router-link to="/input">Input输入框</router-link></li>

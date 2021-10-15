@@ -10,14 +10,28 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "home" */ "../views/home/index.vue"),
   },
-  // Button标签
+  // 字体
+  {
+    path: "/font",
+    name: "Font",
+    component: () =>
+      import(/* webpackChunkName: "font" */ "../views/font/index.vue"),
+  },
+  // 颜色
+  {
+    path: "/color",
+    name: "Color",
+    component: () =>
+      import(/* webpackChunkName: "color" */ "../views/color/index.vue"),
+  },
+  // Button按钮
   {
     path: "/button",
     name: "Button",
     component: () =>
       import(/* webpackChunkName: "button" */ "../views/button/index.vue"),
   },
-  // Icon标签
+  // Icon图标
   {
     path: "/icon",
     name: "Icon",
