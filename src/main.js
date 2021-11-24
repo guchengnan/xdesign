@@ -3,9 +3,7 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 
-// XDesign组件引用
-import XDesign from "../packages/index";
-Vue.use(XDesign);
+import "@/assets/styles/index.css";
 
 Vue.config.productionTip = false;
 

@@ -1,0 +1,44 @@
+:root {
+    /* 用于着重强调的一级数据，DIN(粗体)，行高38px */
+    --strong-font-size: 30px;
+    --strong-line-height: 38px;
+    /* 可作为备用梯度字体酌情使用，行高32px */
+    --sub-font-size: 24px;
+    --sub-line-height: 32px;
+    /* 用于一级标题（页面标题、区块标题），二级数据（TTTGB字体），行高28px */
+    --primary-font-size: 20px;
+    --primary-line-height: 28px;
+    /* 用于二级标题（卡片标题），行高24px */
+    --secondary-font-size: 16px;
+    --secondary-line-height:24px;
+    /* 用于常规字体（导航内容、按钮文字、说明文字、常规正文、列表内容、组件文字），行高22px */
+    --default-font-size: 14px;
+    --default-line-height: 22px;
+    /* 用于辅助文字（面包屑、页面更新时间、组件的补充说明、数据图标的辅助文字），行高20px */
+    --desc-font-size: 12px;
+    --desc-line-height: 20px;
+    /* 主题色 */
+    --theme-color: #4a62e7; /* 一级按钮等 */
+    --theme-hover-color: #4a62e7; /* 按钮悬停 */
+    --theme-disable-color: #c7d0ff; /* 按钮禁用 */
+    /* 文字色 */
+    --default-color: #1d1f24; /* 标题正文 */
+    --desc-color: #4b5d6c; /* 说明文字 */
+    --tips-color: #919eab; /* 提示文字、禁用文字 */
+    --hint-color: #c0c5ca; /* 弱提示文字 */
+    /* 辅助颜色 */
+    --success-color: #17a514; /* 成功状态 */
+    --error-color: #f44336; /* 失败状态 */
+    --warn-color: #ff9f00; /* 警告状态 */
+    /* 其它 */
+    --main-bgcolor: #f4f5f6; /* 背景色 */
+    --desc-bgcolor: #d8d8d8; /* 辅助线条 */
+    --thead-bgcolor: #f9f9f9; /* 表头背景 */
+    --table-border-color: #f4f5f6; /* 表格线条 */
+    --area-border-color: #dbdcdd; /* 组件边框 */
+    /* 数据图表&多彩标签色 */
+    --chart-common-color: #48bcff; /* 普通首选 */
+    --chart-finish-color: #26cf3b; /* 达成率等 */
+    --chart-delay-color: #ffc459; /* 搭配使用 */
+    --chart-fail-color: #ff5959; /* 搭配使用 */
+}

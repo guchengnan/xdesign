@@ -1,0 +1,55 @@
+@import url('../../../packages/assets/styles/xdesign.css');
+*::-webkit-scrollbar {
+    display: none;
+}
+#app {
+    color: #1d1f24;
+    font-family: Segoe UI Symbol,Arial Narrow Bold,sans-serif;
+    display: flex;
+    min-height: 100vh;
+    > aside {
+        width: 240px;
+        padding: 12px;
+        background-color: #fff;
+        border-right: 1px solid var(--area-border-color);
+        > h1{
+            height: 56px;
+            line-height: 56px;
+            background-image: url('~@/assets/images/logo.svg');
+            background-size: 70% auto;
+            background-repeat: no-repeat;
+            text-indent: -999em;
+            background-position: left center;
+        }
+        > ul > li {
+            height: 40px;
+            display: flex;
+            align-items: center;
+            > a {
+                flex: 1;
+                display: block;
+                height: 32px;
+                line-height: 32px;
+                text-indent: 1em;
+                border-radius: 2px;
+                transition: all 0.3s ease-in-out;
+                &:hover {
+                    color: #5f78ff;
+                    border-left-color: #5f78ff;
+                }
+                &[aria-current] {
+                    color: #fff;
+                    background-color: #4a62e7;
+                }
+            }
+        }
+    }
+    > main {
+        flex: 1;
+        padding: 24px;
+        background-color: #fff;
+        > section {
+            margin-bottom: 24px;
+        }
+    }
+}
