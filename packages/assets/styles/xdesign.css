@@ -4,6 +4,8 @@
 *::after {
   margin: 0;
   padding: 0;
+  border: none;
+  outline: none;
   color: var(--default-color);
   font-size: var(--default-font-size);
   list-style-type: none;

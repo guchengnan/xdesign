@@ -9,11 +9,8 @@ const router = new VueRouter({
   base: process.env.BASE_URL,
   routes: [{
     path: "/",
-    redirect: "/use",
-  }, {
-    path: "/use",
-    component: () => import("@/views/Use.vue")
-  }, ...routes,
+    redirect: "/guide",
+  },...routes,
   {
     path: "*",
     component: () => import("@/views/NotFound.vue"),

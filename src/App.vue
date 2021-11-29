@@ -4,7 +4,7 @@
       <h1>XDesign</h1>
       <ul>
         <li v-for="(item, index) in menus" :key="index">
-          <router-link :to="item.path">{{ item.alias }}</router-link>
+          <router-link :to="item.path">{{ item.component && item.component.alias }}</router-link>
         </li>
       </ul>
     </aside>
@@ -26,14 +26,7 @@ export default {
   },
   methods: {
     mergeMenus() {
-      const menus = [
-        {
-          path: '/use',
-          alias: '快速上手',
-          component: () => import('@/views/Use.vue'),
-        },...routes
-      ]
-      this.menus = menus
+      this.menus = routes
     },
   },
 }
